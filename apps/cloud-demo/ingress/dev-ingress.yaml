@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cloud-demo-dev
+  namespace: dev
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /dev(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: cloud-demo-dev
+                port:
+                  number: 80
