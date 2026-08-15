@@ -1,0 +1,19 @@
+# Kubernetes secrets
+*.secret.yaml
+secrets/
+.env
+.env.*
+
+# Helm generated output
+rendered.yaml
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
