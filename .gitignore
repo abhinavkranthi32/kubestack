@@ -1,19 +1,17 @@
-# Kubernetes secrets
-*.secret.yaml
-secrets/
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local storage
+apps/cloud-demo/backend/storage/
+
+# Test/downloaded files
+test.txt
+downloaded.txt
+
+# Environment/secrets
 .env
 .env.*
-
-# Helm generated output
-rendered.yaml
-
-# Terraform
-.terraform/
-*.tfstate
-*.tfstate.*
-
-# OS/editor files
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+!.env.example
